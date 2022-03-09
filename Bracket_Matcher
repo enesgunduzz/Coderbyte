@@ -1,0 +1,15 @@
+def parantezKontrol(soylu):
+  acma =0
+  kapama=0
+  for i in soylu :
+    if(i=='('):
+      acma+=1
+    elif(i==')'):
+      kapama+=1
+      if(kapama>acma):
+        return False
+  if(acma==kapama):
+    return True
+  else:
+    return False
+parantezKontrol(str(input("giriş yapın :")))
